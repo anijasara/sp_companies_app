@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple backend rails application which can be used to manage the sub-companies and employees of international organizations.
 
-Things you may want to cover:
 
-* Ruby version
+ Ruby version  - 2.6.3
+ Rails version - 5.2.4
 
-* System dependencies
+Manual
 
-* Configuration
+* Clone the repository
+* Install gems with bundle install
+* Create local database in postgres - rails db:create
+* Run migrations - rails db:migrate
+* Run rails server in terminal
 
-* Database creation
+* To run unit tests:
 
-* Database initialization
+**  bundle exec rspec -> Included all possible model specs & request specs
 
-* How to run the test suite
+* Have added complete API documentation here : https://docs.google.com/document/d/16y-aA8Frs0vGSQW0ts6dUC4vjd3ySXER4ocSbKND3Xg/edit
 
-* Services (job queues, cache servers, search engines, etc.)
+** All basic logic lies in companies_controller.rb & company.rb, tried to achieve all basic scenarios and used database to manage the scenarios and also written as an API to interact with the backend server.
 
-* Deployment instructions
+Cheers!
 
-* ...
