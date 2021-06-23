@@ -2,7 +2,7 @@ class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :update, :destroy]
 
   def index
-    @companies = Employee.all
+    @employees = Employee.all
   end
 
   def show

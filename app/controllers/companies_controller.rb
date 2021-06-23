@@ -57,7 +57,12 @@ class CompaniesController < ApplicationController
   end
 
   def companies_with_less_required_employees
-    @companies = Company.total_no_of_employees
+    @companies = Company.companies_less_than_target_employees
+    if @companies.present?
+      render json: @companies, status: :ok
+    else
+      render json: {errors:['No companies present with less than target!'], status: :unprocessable_entity}
+    end
   end
 
   private
